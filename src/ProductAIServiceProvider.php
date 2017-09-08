@@ -3,6 +3,10 @@
 namespace Qbhy\ProductAI;
 
 use Illuminate\Support\ServiceProvider;
+use Laravel\Lumen\Application as LumenApplication;
+use Illuminate\Foundation\Application as LaravelApplication;
+
+
 
 class ProductAIServiceProvider extends ServiceProvider
 {
@@ -28,10 +32,10 @@ class ProductAIServiceProvider extends ServiceProvider
     {
         $source = realpath(__DIR__ . '/config/productai.php');
 
-        if ($this->app->runningInConsole()) {
-            $this->publishes([
-                $source => config_path('productai.php'),
-            ]);
+        if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
+            $this->publishes([$source => config_path('productai.php')]);
+        } elseif ($this->app instanceof LumenApplication) {
+            $this->app->configure('productai');
         }
 
         $this->mergeConfigFrom($source, 'productai');
