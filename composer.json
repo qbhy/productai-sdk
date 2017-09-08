@@ -1,0 +1,28 @@
+{
+    "name": "96qbhy/productai-laravel",
+    "description": "码隆科技 ProductAI Laravel SDK",
+    "license": "MIT",
+    "keywords": [
+        "码隆",
+        "productai",
+        "96qbhy",
+        "laravel"
+    ],
+    "authors": [
+        {
+            "name": "96qbhy",
+            "email": "96qbhy@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Qbhy\\ProductAI\\": "src/"
+        }
+    },
+    "require": {
+        "malong/productai": "^0.2.5"
+    },
+    "require-dev": {
+        "laravel/laravel": "^5.5"
+    }
+}
