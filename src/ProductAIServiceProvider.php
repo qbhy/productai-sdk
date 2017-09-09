@@ -30,7 +30,7 @@ class ProductAIServiceProvider extends ServiceProvider
      */
     protected function setupConfig()
     {
-        $source = realpath(__DIR__ . '/config/productai.php');
+        $source = realpath(__DIR__ . '/../config/productai.php');
 
         if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
             $this->publishes([$source => config_path('productai.php')]);

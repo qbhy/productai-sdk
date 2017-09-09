@@ -8,9 +8,9 @@ return [
     'secret_key' => 'xxx',
 
     // 服务ID
-    'server_id' => '167t4rfv',
+    'server_id' => 'xxx',
 
     // 数据集ID
-    'image_set_id' => 't7p5hnnf',
+    'image_set_id' => 'xxx',
 
 ];
