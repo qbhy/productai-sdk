@@ -7,7 +7,6 @@ use Laravel\Lumen\Application as LumenApplication;
 use Illuminate\Foundation\Application as LaravelApplication;
 
 
-
 class ProductAIServiceProvider extends ServiceProvider
 {
     /**
@@ -50,6 +49,19 @@ class ProductAIServiceProvider extends ServiceProvider
         });
 
         $this->app->alias(ProductAI::class, 'productai');
+    }
+
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return string[]
+     */
+    public function provides()
+    {
+        return [
+            ProductAI::class,
+            'productai',
+        ];
     }
 }
 
