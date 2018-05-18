@@ -1,5 +1,5 @@
 {
-    "name": "96qbhy/productai-laravel",
+    "name": "96qbhy/productai-sdk",
     "description": "码隆科技 ProductAI Laravel SDK",
     "license": "MIT",
     "keywords": [
@@ -20,7 +20,8 @@
         }
     },
     "require": {
-        "malong/productai": "^0.2.5"
+        "malong/productai": "^0.4.0",
+        "hanson/foundation-sdk": "^2.0"
     },
     "require-dev": {
         "laravel/laravel": "^5.5"
